@@ -1,0 +1,39 @@
+# Copyright (c) 2020 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+##########################################################
+### OLED ###
+############
+
+# OLED Display is off due to ext pwr bug. Fix soon? 01/25
+CONFIG_ZMK_DISPLAY=n
+
+# Battery Widget, EXT PWR BUG.
+CONFIG_ZMK_WIDGET_BATTERY_STATUS=n
+
+# Enable WPM widget, EXT PWR BUG.
+#CONFIG_ZMK_WPM=n
+CONFIG_ZMK_WIDGET_WPM_STATUS=n
+
+###########################################################
+### Under the Hood ###
+######################
+
+#Encoder on/off
+CONFIG_EC11=y
+CONFIG_EC11_TRIGGER_GLOBAL_THREAD=y
+
+# Deep Sleep on/off
+CONFIG_ZMK_SLEEP=y
+
+# Add debug logging
+CONFIG_ZMK_USB_LOGGING=n
+
+# Set default underglow values
+CONFIG_ZMK_RGB_UNDERGLOW=n
+CONFIG_WS2812_STRIP=n
+
+# Combo Stuff for ARTSEY
+CONFIG_ZMK_COMBO_MAX_COMBOS_PER_KEY=16
+CONFIG_ZMK_COMBO_MAX_KEYS_PER_COMBO=8
+CONFIG_ZMK_COMBO_MAX_PRESSED_COMBOS=8
